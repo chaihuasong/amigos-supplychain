@@ -2,8 +2,11 @@
   <div>
     <el-container>
       <el-header>
+        <div class="home-css">
+          宁波阿密格供应链有限公司
+        </div>
         <div class="el-menu-css">
-          <el-menu :default-active="activeIndex" class="el-menu-right" mode="horizontal" @select="handleSelect">
+          <el-menu :default-active="0" class="el-menu-right" mode="horizontal" @select="handleSelect">
             <el-menu-item index="1">服务介绍</el-menu-item>
             <el-submenu index="2">
               <template slot="title">客户案例</template>
@@ -18,7 +21,7 @@
               </el-submenu>
             </el-submenu>
             <el-menu-item index="3">新闻</el-menu-item>
-            <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">关于我们</a></el-menu-item>
+            <el-menu-item index="4"><a href="" target="_self">关于我们</a></el-menu-item>
           </el-menu>
         </div>
       </el-header>
@@ -39,10 +42,12 @@
           <div class="block" v-for="item in imageData1" :key="item.id">
               <el-col :span="3"><div class="grid-content bg-purple">
                 <el-row>
-                  <el-image
+                  <a href="item.targetUrl" target="_self">
+                    <el-image
                           style="width: 100px; height: 100px"
                           :src="item.url"
                           :fit="fill"/>
+                  </a>
                 </el-row>
                 <el-row>
                   <span class="demonstration">{{ item.title }}</span>
@@ -54,10 +59,12 @@
             <div class="block" v-for="item in imageData2" :key="item.id">
               <el-col :span="3"><div class="grid-content bg-purple">
                 <el-row>
-                  <el-image
-                          style="width: 100px; height: 100px"
-                          :src="item.url"
-                          :fit="fill"/>
+                  <a :href="item.targetUrl" target="_self">
+                    <el-image
+                            style="width: 100px; height: 100px"
+                            :src="item.url"
+                            :fit="fill"/>
+                  </a>
                 </el-row>
                 <el-row>
                   <span class="demonstration">{{ item.title }}</span>
@@ -70,7 +77,7 @@
       <el-footer>
         关于我们: 公司简介 荣誉证书 企业文化 货物跟踪 组织架构 船期查询
         <br/>
-        联系地址: 深圳市罗湖区深南东路文华大厦西座3楼 联系电话: 0755-25107956 投诉建议: 0755-25109119
+        联系地址: 浙江省宁波市鄞州区姚隘路796号(4-4) 联系电话: 0755-25107956 投诉建议: 0755-25109119
       </el-footer>
     </el-container>
   </div>
@@ -88,24 +95,30 @@ export default {
       {url:require('../assets/banner1.jpg'), id:2},
     ],
     imageData1:[
-      {url:require('../assets/modules/bg-float.png'), title:"报关", id:1},
-      {url:require('../assets/modules/hy-float.png'), title:"海运", id:2},
-      {url:require('../assets/modules/ky-float.png'), title:"空运", id:3},
-      {url:require('../assets/modules/qy-float.png'), title:"国内陆运", id:4},
-      {url:require('../assets/modules/sj-float.png'), title:"商检", id:5},
+      {url:require('../assets/modules/bg-float.png'), title:"报关", targetUrl:"", id:1},
+      {url:require('../assets/modules/hy-float.png'), title:"海运", targetUrl:"", id:2},
+      {url:require('../assets/modules/ky-float.png'), title:"空运", targetUrl:"", id:3},
+      {url:require('../assets/modules/qy-float.png'), title:"国内陆运", targetUrl:"", id:4},
+      {url:require('../assets/modules/sj-float.png'), title:"商检", targetUrl:"", id:5},
     ],
     imageData2:[
-      {url:require('../assets/modules/wxp-float.png'), title:"危险品申报", id:1},
-      {url:require('../assets/modules/fba-float.png'), title:"FBA头程服务", id:2},
-      {url:require('../assets/modules/cc-float.png'), title:"海外仓储", id:3},
-      {url:require('../assets/modules/jr-float.png'), title:"物流金融", id:4},
-      {url:require('../assets/modules/bs-float.png'), title:"保税区物流", id:5},
+      {url:require('../assets/modules/wxp-float.png'), title:"危险品申报", targetUrl:"", id:1},
+      {url:require('../assets/modules/fba-float.png'), title:"FBA头程服务", targetUrl:"", id:2},
+      {url:require('../assets/modules/cc-float.png'), title:"海外仓储", targetUrl:"", id:3},
+      {url:require('../assets/modules/jr-float.png'), title:"物流金融", targetUrl:"", id:4},
+      {url:require('../assets/modules/bs-float.png'), title:"保税区物流", targetUrl:"", id:5},
     ]
   })
 }
 </script>
 
 <style>
+  .home-css{
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    font-size: 25px;
+  }
   .el-menu-css{
     position: absolute;
     right: 60px;
