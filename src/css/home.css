@@ -1,0 +1,837 @@
+/*--首页样式--*/
+@media (max-width: 720px) {
+    /*首页banner*/
+    .index-banner {
+        /*background: url("../images/jpg/banner.jpg") no-repeat center;*/
+        background-size: cover;
+    }
+    .banner-content {}
+    /*--滚动监听--*/
+    .right-nav {display: none;}
+    /*--首页导航--*/
+    .index-nav {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 700px;
+        background: #1b1b1b;
+        z-index: 30;
+    }
+    .index-nav-logo {display: none;}
+    .index-nav-list {}
+    .index-nav-list li {
+        margin: 20px 35px;
+        border-bottom: 1px solid #626262;
+    }
+
+    .index-nav-list li a {
+        color: #c9c9c9;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .nav-toggle {
+        padding: 20px;
+        height: 72px;
+    }
+
+    .nav-toggle span {
+        float: right;
+        text-align: right;
+        line-height: 32px;
+        font-weight: bold;
+        font-size: 32px;
+        color: #005ca9;
+    }
+
+    .mb-logo {
+        float: left;
+    }
+
+    .index-nav-close {
+        padding: 35px;
+        color: #c9c9c9;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .index-nav-close span {
+        font-size: 32px;
+        color: #626262;
+    }
+    /*--首页标语--*/
+    .index-slogan {
+        clear: both;
+        padding: 20px 20px 20px 20px;
+    }
+    .index-slogan .slogan-1 {
+        margin-bottom: 5px;
+        font-size: 16px;
+        color: #ffffff;
+    }
+    .index-slogan .slogan-2 {
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #ffffff;
+    }
+    .index-slogan .slogan-3 {
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #ffffff;
+    }
+    .slogan-4 {
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #ffffff;
+    }
+    /*--首页底部操作--*/
+    .banner-action {
+        display: none;
+    }
+    /*--股票代码--*/
+    .text-stock {
+        font-size: 16px;
+        color: #ffffff;
+        opacity: 0.9;
+    }
+    .banner-action ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .banner-action ul .iconfont {
+        margin-right: 8px;
+    }
+    .banner-action ul li a {
+        padding: 0 0 0 40px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #ffffff;
+    }
+    /*--模块标题--*/
+    .block-title {
+        text-align: center;
+        font-size: 30px;
+        padding: 30px 0px;
+        margin-top: 35%;
+    }
+    .block-title_light {
+        color: #ffffff;
+    }
+    /*--服务范围--*/
+    .service-content {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .service-img {
+        width: 150px;
+        height: auto;
+        text-align: center;
+        position: relative;
+    }
+
+    .service-img > img {
+        margin: 0px 0px 18px 0px;
+    }
+
+    .service-img__float {
+        border-radius: 6px;
+    }
+
+    .service-img__float img {
+        margin: 30px 0px 18px 0px;
+    }
+
+    .service-img-text {
+        font-size: 16px;
+        color: #b8ced8;
+    }
+
+    /*--服务优势--*/
+    .service-ad-content {
+        background: #49a0db;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .service-ad-item {
+        width: 40%;
+        height: 250px;
+        margin: 10px;
+        background: #ffffff;
+        opacity: 0.6;
+        text-align: center;
+    }
+
+    .service-ad-item__active {
+        opacity: 1;
+        box-shadow: 1px 1px 30px #888888;
+    }
+
+    .service-ad-item img {
+        margin-top: 30px;
+    }
+
+    .service-ad-num {
+        font-size: 30px;
+        color: #49a0db;
+        margin: 20px 0 26px 0;
+    }
+
+    .service-ad-text {
+        font-size: 12px;
+        color: #7d7d7d;
+    }
+
+    /*--解决方案--*/
+    .solution-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: #49a0db;
+        padding-bottom: 20px;
+    }
+
+    .solution-item {
+        position: relative;
+        margin: 10px;
+        width: 40%;
+    }
+
+    .solution-item img {
+        opacity: 0.4;
+        width: 100%;
+        height: auto;
+    }
+
+    .solution-text {
+        position: absolute;
+        bottom: 30px;
+        left: 31px;
+        color: #ffffff;
+        font-size: 24px;
+        opacity: 0.8;
+    }
+
+    /*--首页客户案例--*/
+    .case-wrap {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .case-container {
+        padding: 0 10px;
+    }
+
+    .case-item {
+        position: relative;
+        margin: 10px 0;
+    }
+
+    .case-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .case-content {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border: 1px solid gainsboro;
+        background: #ffffff;
+    }
+
+    .case-title {
+        font-size: 18px;
+        color: #f0b519;
+    }
+
+    .case-info {
+        margin: 20px 0 20px 0;
+        color: #f0b519;
+    }
+
+    .case-info .iconfont {
+        margin-right: 10px;
+    }
+
+    .case-info .info-text {
+        margin-right: 20px;
+    }
+
+    .case-content p {
+        font-size: 14px;
+        color: #959595;
+        line-height: 22px;
+    }
+
+    .case-arrow-wrap {
+        display: none;
+    }
+
+    .case-arrow-wrap img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /*--行业动态--*/
+    .home-news-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .home-news-item {
+        position: relative;
+        border: 1px solid gainsboro;
+        width: 100%;
+    }
+
+    a.home-news-title {
+        display: block;
+        width: 140px;
+        height: 46px;
+        line-height: 46px;
+        text-align: center;
+        margin: 26px 0px;
+        font-size: 18px;
+        color: #ffffff;
+        background: #f08300;
+        position: relative;
+    }
+
+    a.home-news-title:hover {
+        color: #ffffff;
+    }
+
+    .home-news-list {
+        position: relative;
+        padding: 0 20px 41px 20px;
+    }
+
+    .home-news-list-item {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .home-news-list-item a {
+        margin-bottom: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+        padding: 10px 0px;
+        color: #626262;
+    }
+
+    .home-news-list-item span {
+        color: #626262;
+    }
+
+    .home-news-item img {
+        width: 100%;
+        height: 180px;
+    }
+
+    /*--合作伙伴--*/
+    .partner-content {
+        padding-bottom: 20px;
+    }
+    .partner-col {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .partner-item {
+        margin: 5px;
+    }
+
+    .partner-item img {
+        width: 65px;
+        height: auto;
+    }
+}
+@media (min-width: 720px) {
+    /*首页banner*/
+    .index-banner {
+        min-height: 660px;
+        /*background: url("../images/jpg/banner.jpg") center;*/
+    }
+
+    .banner-content {
+        position: relative;
+        height: 660px;
+    }
+
+    /*首页导航*/
+    .index-nav {
+        min-width: 1200px;
+        height: 76px;
+        padding: 22px 50px;
+    }
+
+    .index-nav-logo {
+        float: left;
+    }
+
+    .index-nav-line {
+        float: left;
+        margin: 0px 0px 0px 50px;
+        width: 25%;
+        padding: 45px 0 0 0;
+        border-bottom: 1px solid white;
+    }
+
+    .index-nav-list {
+        float: right;
+    }
+
+    .index-nav-list li {
+        display: inline;
+        padding-left: 40px;
+    }
+
+    .index-nav-list li a {
+        color: #000;
+        font-size: 16px;
+    }
+
+    .index-nav-list li a:hover {
+        /*font-weight: bold;*/
+        padding-bottom: 23px;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .index-nav-close {
+        display: none;
+    }
+    /*滚动监听*/
+    .right-nav {
+        position: fixed;
+        top: 167px;
+        right: 50px;
+        z-index: 30;
+    }
+
+    .right-nav li a {
+        display: block;
+        cursor: pointer;
+        width: 5px;
+        height: 20px;
+        padding: 0;
+        margin: 8px 0px;
+        background: #49a0db;
+        border-radius: 2px;
+        opacity: 0.1;
+    }
+
+    .right-nav li.active {
+        height: 105px;
+        background: #fdd100;
+        opacity: 1;
+        border-radius: 2px;
+    }
+
+    /**
+     * 首页标语
+     */
+    .index-slogan {
+        clear: both;
+        padding-top: 36px;
+    }
+
+    .index-slogan .slogan-1 {
+        margin-bottom: 23px;
+        font-size: 42px;
+        color: #ffffff;
+    }
+
+    .slogan-1 span {
+        padding-right: 62px;
+    }
+
+    .index-slogan .slogan-2 {
+        margin-bottom: 60px;
+        font-size: 30px;
+        color: #ffffff;
+    }
+
+    .slogan-2 span {
+        margin-right: 30px;
+    }
+
+    .index-slogan .slogan-3 {
+        margin-bottom: 40px;
+        font-size: 22px;
+        line-height: 32px;
+        color: #ffffff;
+        opacity: 0.8;
+    }
+
+    .slogan-4 {
+        font-size: 16px;
+        line-height: 32px;
+        opacity: 0.8;
+        color: #ffffff;
+    }
+
+    /*首页底部操作*/
+    .banner-action {
+        position: relative;
+        margin-top: 30%;
+    }
+
+    /*股票代码*/
+    .text-stock {
+        float: left;
+        font-size: 16px;
+        color: #ffffff;
+        opacity: 0.9;
+    }
+
+    .banner-action ul {
+        float: right;
+    }
+
+    .banner-action ul li {
+        display: inline;
+    }
+
+    .banner-action ul .iconfont {
+        margin-right: 8px;
+    }
+
+    .banner-action ul li a {
+        padding: 0 0 0 30px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #ffffff;
+    }
+
+    .index-row {
+        padding: 80px 0px;
+    }
+
+    /*模块标题*/
+    .block-title {
+        font-size: 34px;
+        font-weight: lighter;
+        color: #535353;
+        padding: 92px 0px;
+        text-align: center;
+    }
+
+    .block-title_light {
+        color: #ffffff;
+    }
+
+    /*服务范围*/
+    .service-content {
+        margin: 0 -13px -70px -13px;
+    }
+
+    .service-img {
+        float: left;
+        width: 221px;
+        margin-bottom: 70px;
+        text-align: center;
+        position: relative;
+    }
+
+    .service-img > img {
+        width: 78px;
+        height: 78px;
+        margin: 0px 0px 18px 0px;
+    }
+
+    .service-img__float {
+        border-radius: 0px;
+    }
+
+    .service-img__float img {
+        margin: 0px 0px 18px 0px;
+    }
+
+    .service-img-text {
+        font-size: 16px;
+        color: #535353;
+    }
+
+    /*服务优势*/
+    .service-ad-content {
+        margin: 0px -20px;
+    }
+
+    .service-ad-item {
+        float: left;
+        width: 240px;
+        height: 329px;
+        margin: 0px 20px;
+        background: #ffffff;
+    }
+
+    .service-ad-item img {
+        display: block;
+        margin: 70px auto;
+    }
+
+    .service-ad-num {
+        font-size: 36px;
+        text-align: center;
+
+        font-family: "Noto Sans SC";
+        margin: -13px 0 17px 0;
+        color: #49a0db;
+    }
+
+    .service-ad-text {
+        text-align: center;
+        font-size: 14px;
+        color: #707070;
+    }
+
+    /*首页客户案例*/
+    .case-wrap {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .case-container {
+        width: 3240px;
+    }
+
+    .case-item {
+        position: relative;
+        float: left;
+    }
+
+    .case-img {
+        float: left;
+        width: 531px;
+        height: 328px;
+    }
+
+    .case-content {
+        float: left;
+        width: 549px;
+        height: 328px;
+        padding: 0 40px;
+        border-right: 1px solid gainsboro;
+        border-bottom: 1px solid gainsboro;
+        border-top: 1px solid gainsboro;
+        background: #ffffff;
+    }
+
+    a.case-title {
+        display: block;
+        margin-top: 50px;
+        font-size: 24px;
+        color: #f0b519;
+    }
+
+    a.case-title:hover {
+        color: #f0b519;
+    }
+
+    .case-info {
+        padding-top: 20px;
+        color: #f0b519;
+    }
+
+    .case-info .iconfont {
+        margin-right: 10px;
+    }
+
+    .case-info .info-text {
+        margin-right: 20px;
+    }
+
+    .case-content p {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #959595;
+        line-height: 22px;
+        height: 92px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .case-arrow-wrap {
+        text-align: right;
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .case-arrow-wrap img {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+    }
+
+    .case-arrow__left {
+        margin-right: 5px;
+    }
+
+    /*解决方案*/
+    .solution-content {
+        margin: 0px -20px;
+    }
+
+    .solution-item {
+        display: block;
+        float: left;
+        position: relative;
+        margin: 0 20px;
+    }
+
+    .solution-item img {
+        width: 240px;
+        height: 373px;
+    }
+
+    .solution-text {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        color: #ffffff;
+        font-size: 24px;
+        opacity: 0.8;
+    }
+
+    a.btn-price_large {
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        width: 360px;
+        height: 56px;
+        line-height: 56px;
+        font-size: 18px;
+        background: #d3af3f;
+        color: white;
+        text-align: center;
+    }
+
+    a.btn-price_large:hover {
+        color: white;
+    }
+
+    a.btn-price_large:visited {
+        color: white;
+    }
+
+    /*行业动态*/
+    .home-news-content {
+        margin-right: -40px;
+    }
+
+    .home-news-item {
+        float: left;
+        margin-right: 40px;
+        position: relative;
+        border: 1px solid gainsboro;
+        width: 333px;
+        height: 383px;
+    }
+
+    a.home-news-title {
+        display: block;
+        width: 122px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin: 20px 0 24px 0;
+        font-size: 16px;
+        color: #ffffff;
+        background: #d3af3f;
+    }
+
+    a.home-news-title:hover {
+        color: #ffffff;
+    }
+
+    .home-news-list {
+        position: relative;
+        padding: 0 30px 24px 30px;
+    }
+
+    .home-news-list-item {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .home-news-list-item a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 24px;
+        color: #626262;
+    }
+
+    .home-news-list-item span {
+        color: #626262;
+    }
+
+    .home-news-item img {
+        width: 100%;
+        height: 157px;
+    }
+
+    /*合作伙伴*/
+    .partner-arrow {
+        cursor: pointer;
+    }
+    .partner-arrow.arrowL {
+        position: absolute;
+        top: 193px;
+        left: -60px;
+        width: 30px;
+        height: 54px;
+    }
+    .partner-arrow.arrowL:hover {
+    }
+    .partner-arrow.arrowL.disable:hover {
+        cursor: auto;
+    }
+
+    .partner-content {
+        position: relative;
+    }
+    .partner-show {
+        overflow: hidden;
+        margin: -20px 0px;
+    }
+    .partner-list {
+        position: relative;
+        left: 0;
+        width: 1295px;
+        height: 443px;
+        margin: -20px 0;
+    }
+    .partner-col {
+        width: 165px;
+        margin-right: 17px;
+        float: left;
+    }
+    .partner-item {
+        margin: 17px 0px 17px 0;
+    }
+}

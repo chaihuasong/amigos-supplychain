@@ -47,6 +47,50 @@
       </el-row>
     </div>
     <div style="height: 100px"/>
+    <div class="btn-price-wrap">
+      <a class="price-advice btn-price_large" @click="dialogVisible = true">获取报价</a>
+    </div>
+    <el-dialog
+            :visible.sync="dialogVisible"
+            width="650px">
+
+      <div class="popup-content">
+        <div class="customer-input">
+          <span class="iconfont icon-chacha customer-close"></span>
+          <div class="head-bg">基本信息</div>
+          <form id="consultForm" method="post">
+            <div class="input-short-wrap">
+              <div class="customer-label">
+                <span>姓名</span>
+              </div>
+              <input id="consultName" v-model="consultName" class="form-item input-short" />
+            </div>
+            <div class="input-short-wrap">
+              <div class="customer-label">
+                <span>电话</span>
+              </div>
+              <input id="consultPhone" v-model="consultPhone" type="email" class="form-item input-short" placeholder="固话请加区号！" required="required" />
+              <div class="phone-note">注:请填写真实有效的联系方式！</div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="input-long-wrap">
+              <div class="customer-label">
+                <span>邮箱</span>
+              </div>
+              <input id="consultEmail" v-model="consultEmail" class="form-item input-long" />
+            </div>
+            <div class="text-long-wrap">
+              <div class="customer-label">
+                <span>备注</span>
+              </div>
+              <textarea id="consultRemark" v-model="consultRemark" class="form-item text-long"
+                        placeholder="请大致介绍您货物信息及起始地和目的地!工作人员会于近期联系您，请注意您的电话或邮箱！"/>
+            </div>
+            <div class="customer-input-btn" @click="submit">提交</div>
+          </form>
+        </div>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -57,6 +101,11 @@ export default {
     msg: String
   },
   data: () => ({
+    consultName:'',
+    consultPhone:'',
+    consultEmail:'',
+    consultRemark:'',
+    dialogVisible: false,
     carouselData:[
       {url:require('../images/banner0.jpg'), id:1},
       {url:require('../images/banner1.jpg'), id:2},
@@ -75,11 +124,75 @@ export default {
       {url:require('../images/modules/jr.png'), title:"物流金融", targetUrl:"", id:4},
       {url:require('../images/modules/bs.png'), title:"保税区物流", targetUrl:"", id:5},
     ]
-  })
+  }),
+  methods: {
+    open() {
+      this.$alert('\n' +
+              '        <div class="popup-content">\n' +
+              '            <div class="customer-input">\n' +
+              '                <span class="iconfont icon-chacha customer-close"></span>\n' +
+              '                <div class="head-bg">基本信息</div>\n' +
+              '                <form id="consultForm" method="post">\n' +
+              '                    <div class="input-short-wrap">\n' +
+              '                        <div class="customer-label">\n' +
+              '                            <span>姓名</span>\n' +
+              '                        </div>\n' +
+              '                        <input id="consultName" class="form-item input-short" />\n' +
+              '                    </div>\n' +
+              '                    <div class="input-short-wrap">\n' +
+              '                        <div class="customer-label">\n' +
+              '                            <span>电话</span>\n' +
+              '                        </div>\n' +
+              '                        <input id="consultPhone" type="email" class="form-item input-short" placeholder="固话请加区号！" required="required" />\n' +
+              '                        <div class="phone-note">注:请填写真实有效的联系方式！</div>\n' +
+              '                    </div>\n' +
+              '                    <div class="clearfix"></div>\n' +
+              '                    <div class="input-long-wrap">\n' +
+              '                        <div class="customer-label">\n' +
+              '                            <span>邮箱</span>\n' +
+              '                        </div>\n' +
+              '                        <input id="consultEmail" class="form-item input-long" />\n' +
+              '                    </div>\n' +
+              '                    <div class="text-long-wrap">\n' +
+              '                        <div class="customer-label">\n' +
+              '                            <span>备注</span>\n' +
+              '                        </div>\n' +
+              '                        <textarea id="consultRemark" class="form-item text-long" placeholder="请大致介绍您货物信息及起始地和目的地!工作人员会于近期联系您，请注意您的电话或邮箱！"></textarea>\n' +
+              '                    </div>\n' +
+              '                    <div class="customer-input-btn" @click="submit">提交</div>\n' +
+              '                </form>\n' +
+              '            </div>\n' +
+              '        </div>', '', {
+        dangerouslyUseHTMLString: true,
+        customClass:"msgBox",
+        showConfirmButton:false,
+      });
+    },
+    submit() {
+      const requestForm = {
+        consultName: this.consultName,
+        consultPhone: this.consultPhone,
+        consultEmail: this.consultEmail,
+        consultRemark: this.consultRemark
+      };
+      this.dialogVisible = false;
+      this.$post('http://changsong.net.cn', requestForm).then(req => {
+        console.log(req.data)
+      }).catch(err => {
+        console.log(err)
+      });
+    }
+  }
 }
 </script>
 
 <style>
+  @import "../css/common.css";
+  @import "../css/home.css";
+  .msgBox {
+    width:33%;
+    height: 65%;
+  }
   .el-main {
     text-align: center;
     height: 1200px;
